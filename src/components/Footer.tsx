@@ -1,7 +1,11 @@
 import React from 'react';
 import { Mail, Phone, MapPin, ShieldCheck, Heart, Landmark } from 'lucide-react';
 
-export default function Footer() {
+interface FooterProps {
+  onSelectTab?: (tab: string) => void;
+}
+
+export default function Footer({ onSelectTab }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -85,7 +89,18 @@ export default function Footer() {
       <div className="w-full bg-stone-950 border-t border-stone-900 py-6 px-4">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-stone-500 font-mono">
           <p>© {currentYear} O'Connor Contracting WNY. All rights reserved.</p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
+            {onSelectTab && (
+              <>
+                <button 
+                  onClick={() => onSelectTab('admin')}
+                  className="hover:text-amber-500 transition-colors cursor-pointer text-[11px] font-mono outline-none"
+                >
+                  Owner Portal 🔑
+                </button>
+                <span>•</span>
+              </>
+            )}
             <span className="hover:text-amber-500 transition-colors cursor-pointer">Lic. NY-1049-C</span>
             <span>•</span>
             <span className="hover:text-amber-500 transition-colors cursor-pointer text-xs flex items-center gap-1">

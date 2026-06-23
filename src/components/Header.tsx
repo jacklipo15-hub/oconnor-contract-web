@@ -13,7 +13,8 @@ export default function Header({ activeTab, setActiveTab }: HeaderProps) {
     { id: 'services', label: 'Contracting Services' },
     { id: 'cli-planner', label: 'AI Project Advisor' },
     { id: 'booking', label: 'Book Consultation' },
-    { id: 'standards', label: 'Safety & Insurance' }
+    { id: 'standards', label: 'Safety & Insurance' },
+    { id: 'admin', label: 'Owner Portal' }
   ];
 
   return (

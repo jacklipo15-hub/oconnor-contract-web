@@ -5,6 +5,7 @@ import ServiceShowcase from './components/ServiceShowcase';
 import AiPlanner from './components/AiPlanner';
 import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
+import AdminPanel from './components/AdminPanel';
 import { ProjectCategory } from './types';
 
 export default function App() {
@@ -145,6 +146,10 @@ export default function App() {
           />
         )}
 
+        {activeTab === 'admin' && (
+          <AdminPanel />
+        )}
+
         {/* Standards, Licensing & Safety Page */}
         {activeTab === 'standards' && (
           <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 animate-fade-in" id="standards_section_view">
@@ -232,7 +237,7 @@ export default function App() {
       </main>
 
       {/* Visual Footer Corporate */}
-      <Footer />
+      <Footer onSelectTab={setActiveTab} />
 
     </div>
   );
