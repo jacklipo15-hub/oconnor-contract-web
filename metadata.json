@@ -1,0 +1,6 @@
+{
+  "name": "O'Connor Contracting",
+  "description": "Premium roofing, siding, custom decks, and general home remodeling services based in Buffalo, NY. Request free estimates and consult with our AI Project Advisor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
